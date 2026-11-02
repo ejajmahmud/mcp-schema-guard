@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-schema-guard"
+version = "0.1.0"
+description = "Real-time JSON-RPC schema validator and sanitizing proxy for MCP tools"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+mcp-schema-guard = "mcp_schema_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp_schema_guard*"]
